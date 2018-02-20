@@ -12,5 +12,5 @@ object Entry extends App {
 
   val service = actorSystem.actorOf(Props[ConvertActor], "convert-service")
 
-  IO(Http) ! Http.Bind(service, "localhost", 8085)
+  IO(Http) ! Http.Bind(service, "0.0.0.0", 8085)
 }
